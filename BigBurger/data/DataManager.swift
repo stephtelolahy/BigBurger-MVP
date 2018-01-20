@@ -15,5 +15,6 @@ class DataManager {
     func getBurgers() -> Observable<[Burger]> {
         let burgers = [Burger.sample, Burger.sample, Burger.sample]
         return Observable.just(burgers)
+//        return Observable.error(NSError(domain: "Failed getting burgers", code: 0, userInfo: nil))
     }
 }

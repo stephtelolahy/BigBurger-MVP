@@ -7,8 +7,8 @@
 //
 
 protocol MenusView {
-    func show(burgers: [Burger])
     func show(error: Error)
+    func show(burgers: [Burger])
 }
 
 protocol MenusEventHandler {

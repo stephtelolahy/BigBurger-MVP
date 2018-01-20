@@ -66,6 +66,4 @@ extension MenusViewController: MenusView {
         alertController.addAction(actionButton)
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
 }
