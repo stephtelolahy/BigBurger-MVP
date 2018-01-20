@@ -6,12 +6,14 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
+import RxSwift
 
 class DataManager {
     
     static let shared = DataManager()
 
-    func getBurgers() -> [Burger] {
-        return [Burger.sample, Burger.sample, Burger.sample]
+    func getBurgers() -> Observable<[Burger]> {
+        let burgers = [Burger.sample, Burger.sample, Burger.sample]
+        return Observable.just(burgers)
     }
 }

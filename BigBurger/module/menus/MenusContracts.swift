@@ -13,5 +13,6 @@ protocol MenusView {
 
 protocol MenusEventHandler {
     func onWillAppear()
+    func onWillDisappear()
     func onBurgerSelected(_ burger: Burger)
 }

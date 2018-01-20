@@ -22,7 +22,6 @@ class BurgerCell: UITableViewCell {
         self.descriptionLabel.text = burger.description
     }
     
-    
     @IBAction func addButtonTouchUpInside(_ sender: Any) {
         
     }

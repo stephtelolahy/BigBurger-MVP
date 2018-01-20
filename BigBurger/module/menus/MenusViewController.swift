@@ -27,6 +27,12 @@ class MenusViewController: UITableViewController {
         
         self.presenter?.onWillAppear()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.presenter?.onWillDisappear()
+    }
 
     // MARK: - UITableViewDataSource
 
