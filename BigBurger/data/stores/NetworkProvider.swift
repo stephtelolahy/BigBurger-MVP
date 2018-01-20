@@ -41,21 +41,16 @@ class NetworkProvider {
     
     func getBurgers() -> Observable<[Burger]> {
         return self.get("https://bigburger.useradgents.com/catalog/").map({ (json) -> [Burger] in
-            let burgers = [Burger.sample, Burger.sample, Burger.sample]
+            guard let jsonArray = json as? [[String: Any]] else {
+                throw NSError.init(domain: "Mapping error", code: 0, userInfo: nil)
+            }
+            var burgers: [Burger] = []
+            for jsonElement in jsonArray {
+                if let burger = Burger(jsonElement) {
+                    burgers.append(burger)
+                }
+            }
             return burgers
         })
     }
 }
-
-
-private extension Burger {
-    
-    static var sample: Burger {
-        return Burger.init(ref: 1,
-                           title: "The Big Burger",
-                           description: "Un classique mais tellement bon.",
-                           thumbnail: "https://bigburger.useradgents.com/images/1.png",
-                           price: 92820)
-    }
-}
-
