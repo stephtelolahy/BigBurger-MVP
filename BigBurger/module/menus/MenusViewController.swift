@@ -48,6 +48,7 @@ class MenusViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.presenter?.onBurgerSelected(self.burgers[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

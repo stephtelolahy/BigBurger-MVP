@@ -58,7 +58,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="addButtonTouchUpInside:" destination="vef-rO-Xg2" eventType="touchUpInside" id="hQu-Ep-6fh"/>
+                                                <action selector="priceButtonTouchUpInside:" destination="vef-rO-Xg2" eventType="touchUpInside" id="lV0-e5-fSn"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esB-xr-fwo">
@@ -88,6 +88,7 @@
                                 <connections>
                                     <outlet property="burgerImageView" destination="ai7-C5-ufg" id="C9l-1s-QiS"/>
                                     <outlet property="descriptionLabel" destination="esB-xr-fwo" id="UKZ-f5-6dM"/>
+                                    <outlet property="priceButton" destination="GtL-mZ-RRu" id="fA8-xw-fKi"/>
                                     <outlet property="titleLabel" destination="Rb8-V8-3Bx" id="x98-27-Ett"/>
                                 </connections>
                             </tableViewCell>

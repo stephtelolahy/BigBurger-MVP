@@ -14,15 +14,16 @@ class BurgerCell: UITableViewCell {
     @IBOutlet weak var burgerImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var priceButton: UIButton!
     
     func update(with burger: Burger) {
         self.burgerImageView.kf.setImage(with: URL(string: burger.thumbnail))
         self.titleLabel.text = burger.title
         self.descriptionLabel.text = burger.description
+        self.priceButton.setTitle(String.init(format: "%.2f€", Float(burger.price) / 10000.0), for: .normal)
     }
     
-    @IBAction func addButtonTouchUpInside(_ sender: Any) {
+    @IBAction func priceButtonTouchUpInside(_ sender: Any) {
         
     }
     
