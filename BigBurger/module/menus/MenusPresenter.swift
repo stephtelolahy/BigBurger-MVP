@@ -13,8 +13,6 @@ class MenusPresenter: BasePresenter<MenusView>, MenusEventHandler {
     // MARK: MenusEventHandler
     
     override func onWillAppear() {
-        super.onWillAppear()
-        
         self.view.showLoader()
         self.sub(DataManager.shared.getBurgers().subscribe(
             onNext: { (burgers) in
