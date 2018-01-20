@@ -12,6 +12,7 @@
 		AD1892F92012FDE300E946F8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C43201291AA00233215 /* Info.plist */; };
 		AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892FA2012FE6500E946F8 /* NetworkProvider.swift */; };
 		AD1892FD2012FED100E946F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1892FC2012FED100E946F8 /* LaunchScreen.storyboard */; };
+		AD189300201300E700E946F8 /* BurgerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892FF201300E700E946F8 /* BurgerCell.swift */; };
 		ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C37201291AA00233215 /* AppDelegate.swift */; };
 		ADC16C3D201291AA00233215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3B201291AA00233215 /* Main.storyboard */; };
 		ADC16C3F201291AA00233215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3E201291AA00233215 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		AD1892F52012FD1200E946F8 /* MenusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenusViewController.swift; sourceTree = "<group>"; };
 		AD1892FA2012FE6500E946F8 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		AD1892FC2012FED100E946F8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD1892FF201300E700E946F8 /* BurgerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCell.swift; sourceTree = "<group>"; };
 		ADC16C34201291AA00233215 /* BigBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC16C37201291AA00233215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC16C3C201291AA00233215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				ADC16C3B201291AA00233215 /* Main.storyboard */,
 				AD1892F52012FD1200E946F8 /* MenusViewController.swift */,
+				AD1892FE201300C900E946F8 /* cells */,
 			);
 			path = menus;
 			sourceTree = "<group>";
@@ -89,6 +92,14 @@
 				ADC16C37201291AA00233215 /* AppDelegate.swift */,
 			);
 			path = application;
+			sourceTree = "<group>";
+		};
+		AD1892FE201300C900E946F8 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD1892FF201300E700E946F8 /* BurgerCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		ADC16C2B201291AA00233215 = {
@@ -265,9 +276,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -283,6 +299,7 @@
 			files = (
 				AD1892F62012FD1200E946F8 /* MenusViewController.swift in Sources */,
 				ADC16C4C201291E100233215 /* Burger.swift in Sources */,
+				AD189300201300E700E946F8 /* BurgerCell.swift in Sources */,
 				ADC16C50201293C400233215 /* DataManager.swift in Sources */,
 				ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */,
 				AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */,

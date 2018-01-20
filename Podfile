@@ -6,5 +6,8 @@ target 'BigBurger' do
   use_frameworks!
 
   # Pods for BigBurger
+  
+  pod 'Kingfisher'
+  pod 'MBProgressHUD'
 
 end
