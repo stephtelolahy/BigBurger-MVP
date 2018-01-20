@@ -11,7 +11,7 @@ import UIKit
 class MenusViewController: UITableViewController {
     
     // MARK: Fields
-    private var presenter: MenusEventHandler?
+    private var presenter: (BaseEventHandler<MenusView> & MenusEventHandler)?
     private var burgers: [Burger] = []
 
     // MARK: - Lifecycle
@@ -58,12 +58,5 @@ extension MenusViewController: MenusView {
     func show(burgers: [Burger]) {
         self.burgers = burgers
         self.tableView.reloadData()
-    }
-    
-    func show(error: Error) {
-        let alertController = UIAlertController(title: "An error occured", message: error.localizedDescription, preferredStyle: .alert)
-        let actionButton = UIAlertAction(title: "ok", style: .default, handler: nil)
-        alertController.addAction(actionButton)
-        self.present(alertController, animated: true, completion: nil)
     }
 }

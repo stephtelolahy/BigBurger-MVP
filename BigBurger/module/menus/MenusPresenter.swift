@@ -8,36 +8,13 @@
 
 import RxSwift
 
-class MenusPresenter: MenusEventHandler {
+class MenusPresenter: BaseEventHandler<MenusView>, MenusEventHandler {
     
-    // MARK: Fields
-    
-    private let view: MenusView
-    private var subscriptions: [Disposable] = []
-    
-    // MARK: Init
-    
-    init(view: MenusView) {
-        self.view = view
-    }
-    
-    // MARK: Subscriptions
-    
-    func sub(_ disposable: Disposable) {
-        self.subscriptions.append(disposable)
-        print("self.subscriptions: \(self.subscriptions)")
-    }
-    
-    func unSub() {
-        while !subscriptions.isEmpty {
-            subscriptions.popLast()?.dispose()
-        }
-        print("subscription disposed: \(self.subscriptions)")
-    }
-
     // MARK: MenusEventHandler
     
-    func onWillAppear() {
+    override func onWillAppear() {
+        super.onWillAppear()
+        
         self.view.showLoader()
         self.sub(DataManager.shared.getBurgers().subscribe(
             onNext: { (burgers) in
@@ -47,10 +24,6 @@ class MenusPresenter: MenusEventHandler {
             self.view.show(error: error)
             self.view.hideLoader()
         }))
-    }
-    
-    func onWillDisappear() {
-        self.unSub()
     }
     
     func onBurgerSelected(_ burger: Burger) {
