@@ -9,5 +9,8 @@ target 'BigBurger' do
   
   pod 'Kingfisher'
   pod 'MBProgressHUD'
+  
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end

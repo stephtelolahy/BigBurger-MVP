@@ -10,21 +10,25 @@ import UIKit
 
 class MenusViewController: UITableViewController {
     
+    // MARK: Fields
+    private var presenter: MenusEventHandler?
     private var burgers: [Burger] = []
 
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.presenter = MenusPresenter(view: self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        burgers = DataManager.shared.getBurgers()
-        tableView.reloadData()
+        self.presenter?.onWillAppear()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
+    // MARK: - UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return burgers.count
@@ -32,7 +36,30 @@ class MenusViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BurgerCell", for: indexPath) as! BurgerCell
-        cell.update(with: burgers[indexPath.row])
+        cell.update(with: self.burgers[indexPath.row])
         return cell
     }
+    
+    // MARK: UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter?.onBurgerSelected(self.burgers[indexPath.row])
+    }
+}
+
+extension MenusViewController: MenusView {
+    
+    func show(burgers: [Burger]) {
+        self.burgers = burgers
+        self.tableView.reloadData()
+    }
+    
+    func show(error: Error) {
+        let alertController = UIAlertController(title: "An error occured", message: error.localizedDescription, preferredStyle: .alert)
+        let actionButton = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alertController.addAction(actionButton)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
 }

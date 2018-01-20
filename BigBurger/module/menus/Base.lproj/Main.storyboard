@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Menus-->
         <scene sceneID="Ypp-M0-uDg">
             <objects>
                 <tableViewController id="ONH-Cv-FqR" customClass="MenusViewController" customModule="BigBurger" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="ONH-Cv-FqR" id="k7n-CX-GUm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Fdc-SC-YWq"/>
+                    <navigationItem key="navigationItem" title="Menus" id="Fdc-SC-YWq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E06-87-0Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
