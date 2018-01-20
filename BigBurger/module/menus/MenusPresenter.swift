@@ -8,7 +8,7 @@
 
 import RxSwift
 
-class MenusPresenter: BaseEventHandler<MenusView>, MenusEventHandler {
+class MenusPresenter: BasePresenter<MenusView>, MenusEventHandler {
     
     // MARK: MenusEventHandler
     

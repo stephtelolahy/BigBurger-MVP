@@ -11,7 +11,7 @@ import UIKit
 class MenusViewController: UITableViewController {
     
     // MARK: Fields
-    private var presenter: (BaseEventHandler<MenusView> & MenusEventHandler)?
+    private var presenter: (BasePresenter<MenusView> & MenusEventHandler)?
     private var burgers: [Burger] = []
 
     // MARK: - Lifecycle
