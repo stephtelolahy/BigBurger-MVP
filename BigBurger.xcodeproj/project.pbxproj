@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		81E321D9CFED968253A145A0 /* Pods_BigBurger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E1FF027245C10EF897FFC3 /* Pods_BigBurger.framework */; };
+		AD1892F62012FD1200E946F8 /* MenusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892F52012FD1200E946F8 /* MenusViewController.swift */; };
+		AD1892F92012FDE300E946F8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C43201291AA00233215 /* Info.plist */; };
+		AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892FA2012FE6500E946F8 /* NetworkProvider.swift */; };
+		AD1892FD2012FED100E946F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1892FC2012FED100E946F8 /* LaunchScreen.storyboard */; };
 		ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C37201291AA00233215 /* AppDelegate.swift */; };
-		ADC16C3A201291AA00233215 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C39201291AA00233215 /* ViewController.swift */; };
 		ADC16C3D201291AA00233215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3B201291AA00233215 /* Main.storyboard */; };
 		ADC16C3F201291AA00233215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3E201291AA00233215 /* Assets.xcassets */; };
-		ADC16C42201291AA00233215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C40201291AA00233215 /* LaunchScreen.storyboard */; };
 		ADC16C4C201291E100233215 /* Burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C4B201291E100233215 /* Burger.swift */; };
 		ADC16C50201293C400233215 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C4F201293C400233215 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C3EBCDFCC1FC772380CEBE9 /* Pods-BigBurger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.debug.xcconfig"; sourceTree = "<group>"; };
+		AD1892F52012FD1200E946F8 /* MenusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenusViewController.swift; sourceTree = "<group>"; };
+		AD1892FA2012FE6500E946F8 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		AD1892FC2012FED100E946F8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADC16C34201291AA00233215 /* BigBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC16C37201291AA00233215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADC16C39201291AA00233215 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ADC16C3C201291AA00233215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADC16C3E201291AA00233215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ADC16C41201291AA00233215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADC16C43201291AA00233215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC16C4B201291E100233215 /* Burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burger.swift; sourceTree = "<group>"; };
 		ADC16C4F201293C400233215 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -61,6 +64,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD1892F42012FCE800E946F8 /* menus */ = {
+			isa = PBXGroup;
+			children = (
+				ADC16C3B201291AA00233215 /* Main.storyboard */,
+				AD1892F52012FD1200E946F8 /* MenusViewController.swift */,
+			);
+			path = menus;
+			sourceTree = "<group>";
+		};
+		AD1892F72012FD7800E946F8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADC16C43201291AA00233215 /* Info.plist */,
+				ADC16C3E201291AA00233215 /* Assets.xcassets */,
+				AD1892FC2012FED100E946F8 /* LaunchScreen.storyboard */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		AD1892F82012FDA200E946F8 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				ADC16C37201291AA00233215 /* AppDelegate.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
 		ADC16C2B201291AA00233215 = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +112,10 @@
 		ADC16C36201291AA00233215 /* BigBurger */ = {
 			isa = PBXGroup;
 			children = (
+				AD1892F82012FDA200E946F8 /* application */,
 				ADC16C4A201291CE00233215 /* data */,
 				ADC16C49201291C800233215 /* module */,
-				ADC16C37201291AA00233215 /* AppDelegate.swift */,
-				ADC16C39201291AA00233215 /* ViewController.swift */,
-				ADC16C3B201291AA00233215 /* Main.storyboard */,
-				ADC16C3E201291AA00233215 /* Assets.xcassets */,
-				ADC16C40201291AA00233215 /* LaunchScreen.storyboard */,
-				ADC16C43201291AA00233215 /* Info.plist */,
+				AD1892F72012FD7800E946F8 /* resources */,
 			);
 			path = BigBurger;
 			sourceTree = "<group>";
@@ -97,6 +123,7 @@
 		ADC16C49201291C800233215 /* module */ = {
 			isa = PBXGroup;
 			children = (
+				AD1892F42012FCE800E946F8 /* menus */,
 			);
 			path = module;
 			sourceTree = "<group>";
@@ -104,9 +131,9 @@
 		ADC16C4A201291CE00233215 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				ADC16C4F201293C400233215 /* DataManager.swift */,
 				ADC16C4D201293A700233215 /* model */,
 				ADC16C4E201293B300233215 /* stores */,
-				ADC16C4F201293C400233215 /* DataManager.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -122,6 +149,7 @@
 		ADC16C4E201293B300233215 /* stores */ = {
 			isa = PBXGroup;
 			children = (
+				AD1892FA2012FE6500E946F8 /* NetworkProvider.swift */,
 			);
 			path = stores;
 			sourceTree = "<group>";
@@ -188,7 +216,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC16C42201291AA00233215 /* LaunchScreen.storyboard in Resources */,
+				AD1892F92012FDE300E946F8 /* Info.plist in Resources */,
+				AD1892FD2012FED100E946F8 /* LaunchScreen.storyboard in Resources */,
 				ADC16C3F201291AA00233215 /* Assets.xcassets in Resources */,
 				ADC16C3D201291AA00233215 /* Main.storyboard in Resources */,
 			);
@@ -252,10 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1892F62012FD1200E946F8 /* MenusViewController.swift in Sources */,
 				ADC16C4C201291E100233215 /* Burger.swift in Sources */,
 				ADC16C50201293C400233215 /* DataManager.swift in Sources */,
-				ADC16C3A201291AA00233215 /* ViewController.swift in Sources */,
 				ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */,
+				AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,14 +298,6 @@
 				ADC16C3C201291AA00233215 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ADC16C40201291AA00233215 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADC16C41201291AA00233215 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -395,7 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = BigBurger/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BigBurger/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativegames.BigBurger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,7 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = BigBurger/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BigBurger/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativegames.BigBurger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
