@@ -21,36 +21,29 @@ class NetworkProvider {
         self.alamoFireManager = Alamofire.SessionManager(configuration: self.configuration)
     }
     
-    private func get(_ stringUrl: String) -> Observable<Any> {
+    private func get(_ stringUrl: String) -> Observable<Data> {
         return Observable.create{ observer in
             self.alamoFireManager.request(stringUrl, method: .get, headers: self.headers)
                 .validate()
-                .responseJSON { response in
-                    print("\n\n==\nRequest : [GET] \(stringUrl)\nHeaders: \(self.headers)\nResponse : \(response)")
-                    switch response.result {
-                    case .success(let json):
-                        observer.onNext(json)
-                        observer.onCompleted()
-                    case .failure(let error):
+                .responseData(completionHandler: { (response) in
+                    if let error = response.error {
                         observer.onError(error)
+                    } else if let data = response.data {
+                        observer.onNext(data)
+                        observer.onCompleted()
+                    } else {
+                        observer.onError(NSError.init(domain: "Invalid response", code: 0, userInfo: nil))
                     }
-            }
+                })
             return Disposables.create()
         }
     }
     
     func getBurgers() -> Observable<[Burger]> {
-        return self.get("https://bigburger.useradgents.com/catalog/").map({ (json) -> [Burger] in
-            guard let jsonArray = json as? [[String: Any]] else {
-                throw NSError.init(domain: "Mapping error", code: 0, userInfo: nil)
-            }
-            var burgers: [Burger] = []
-            for jsonElement in jsonArray {
-                if let burger = Burger(jsonElement) {
-                    burgers.append(burger)
-                }
-            }
-            return burgers
-        })
+        return self.get("https://bigburger.useradgents.com/catalog/")
+            .map({ (data) -> [Burger] in
+                return try JSONDecoder().decode([Burger].self, from: data)
+            })
     }
 }
+

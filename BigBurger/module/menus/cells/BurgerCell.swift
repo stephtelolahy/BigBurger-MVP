@@ -20,7 +20,7 @@ class BurgerCell: UITableViewCell {
         self.burgerImageView.kf.setImage(with: URL(string: burger.thumbnail))
         self.titleLabel.text = burger.title
         self.descriptionLabel.text = burger.description
-        self.priceButton.setTitle(String.init(format: "%.2f€", Float(burger.price) / 10000.0), for: .normal)
+        self.priceButton.setTitle(String(format: "%.2f€", Float(burger.price) / 10000.0), for: .normal)
     }
     
     @IBAction func priceButtonTouchUpInside(_ sender: Any) {
