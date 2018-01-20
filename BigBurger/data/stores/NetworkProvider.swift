@@ -11,13 +11,51 @@ import Alamofire
 
 class NetworkProvider {
     
-    let configuration = URLSessionConfiguration.default
-    var alamoFireManager = Alamofire.SessionManager.default
-    var headers: [String: String] = ["Content-Type": "application/json"]
+    private let configuration = URLSessionConfiguration.default
+    private let alamoFireManager: Alamofire.SessionManager
+    private var headers: [String: String] = ["Content-Type": "application/json"]
     
     init() {
         self.configuration.timeoutIntervalForRequest = 30
         self.configuration.timeoutIntervalForResource = 30
         self.alamoFireManager = Alamofire.SessionManager(configuration: self.configuration)
     }
+    
+    private func get(_ stringUrl: String) -> Observable<Any> {
+        return Observable.create{ observer in
+            self.alamoFireManager.request(stringUrl, method: .get, headers: self.headers)
+                .validate()
+                .responseJSON { response in
+                    print("\n\n==\nRequest : [GET] \(stringUrl)\nHeaders: \(self.headers)\nResponse : \(response)")
+                    switch response.result {
+                    case .success(let json):
+                        observer.onNext(json)
+                        observer.onCompleted()
+                    case .failure(let error):
+                        observer.onError(error)
+                    }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func getBurgers() -> Observable<[Burger]> {
+        return self.get("https://bigburger.useradgents.com/catalog/").map({ (json) -> [Burger] in
+            let burgers = [Burger.sample, Burger.sample, Burger.sample]
+            return burgers
+        })
+    }
 }
+
+
+private extension Burger {
+    
+    static var sample: Burger {
+        return Burger.init(ref: 1,
+                           title: "The Big Burger",
+                           description: "Un classique mais tellement bon.",
+                           thumbnail: "https://bigburger.useradgents.com/images/1.png",
+                           price: 92820)
+    }
+}
+
