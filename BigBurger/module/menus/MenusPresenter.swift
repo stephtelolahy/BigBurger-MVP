@@ -19,7 +19,7 @@ class MenusPresenter: BasePresenter<MenusView>, MenusEventHandler {
                 self.view.setBurgers(burgers)
                 self.view.hideLoader()
         }, onError: { (error) in
-            self.view.show(error: error)
+            self.view.showError(error)
             self.view.hideLoader()
         }))
     }

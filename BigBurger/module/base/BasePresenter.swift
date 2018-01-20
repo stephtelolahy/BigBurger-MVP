@@ -37,7 +37,7 @@ class BasePresenter<T>: BaseEventHandler {
         print("self.subscriptions: \(self.subscriptions)")
     }
     
-    func unSub() {
+    private func unSub() {
         while !subscriptions.isEmpty {
             subscriptions.popLast()?.dispose()
         }
