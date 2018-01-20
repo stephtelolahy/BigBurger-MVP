@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		81E321D9CFED968253A145A0 /* Pods_BigBurger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E1FF027245C10EF897FFC3 /* Pods_BigBurger.framework */; };
 		AD1892F62012FD1200E946F8 /* MenusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892F52012FD1200E946F8 /* MenusViewController.swift */; };
-		AD1892F92012FDE300E946F8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C43201291AA00233215 /* Info.plist */; };
 		AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892FA2012FE6500E946F8 /* NetworkProvider.swift */; };
 		AD1892FD2012FED100E946F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1892FC2012FED100E946F8 /* LaunchScreen.storyboard */; };
 		AD189300201300E700E946F8 /* BurgerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892FF201300E700E946F8 /* BurgerCell.swift */; };
@@ -18,7 +17,6 @@
 		AD57258620130C8A0040A25B /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258520130C8A0040A25B /* BasePresenter.swift */; };
 		AD57258820130CB90040A25B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258720130CB90040A25B /* BaseView.swift */; };
 		AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258A20130D800040A25B /* UIViewControllerExtension.swift */; };
-		AD57258D2013144B0040A25B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258C2013144B0040A25B /* BaseTableViewController.swift */; };
 		ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C37201291AA00233215 /* AppDelegate.swift */; };
 		ADC16C3D201291AA00233215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3B201291AA00233215 /* Main.storyboard */; };
 		ADC16C3F201291AA00233215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3E201291AA00233215 /* Assets.xcassets */; };
@@ -37,7 +35,6 @@
 		AD57258520130C8A0040A25B /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		AD57258720130CB90040A25B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AD57258A20130D800040A25B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		AD57258C2013144B0040A25B /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		ADC16C34201291AA00233215 /* BigBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC16C37201291AA00233215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC16C3C201291AA00233215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,7 +118,6 @@
 			children = (
 				AD57258720130CB90040A25B /* BaseView.swift */,
 				AD57258520130C8A0040A25B /* BasePresenter.swift */,
-				AD57258C2013144B0040A25B /* BaseTableViewController.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -261,7 +257,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD1892F92012FDE300E946F8 /* Info.plist in Resources */,
 				AD1892FD2012FED100E946F8 /* LaunchScreen.storyboard in Resources */,
 				ADC16C3F201291AA00233215 /* Assets.xcassets in Resources */,
 				ADC16C3D201291AA00233215 /* Main.storyboard in Resources */,
@@ -341,7 +336,6 @@
 				AD5010B5201305610019D7AA /* MenusContracts.swift in Sources */,
 				ADC16C50201293C400233215 /* DataManager.swift in Sources */,
 				AD57258620130C8A0040A25B /* BasePresenter.swift in Sources */,
-				AD57258D2013144B0040A25B /* BaseTableViewController.swift in Sources */,
 				ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */,
 				AD57258820130CB90040A25B /* BaseView.swift in Sources */,
 				AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */,

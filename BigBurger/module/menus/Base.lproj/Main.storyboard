@@ -81,6 +81,7 @@
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ai7-C5-ufg" secondAttribute="bottom" constant="16" id="amD-45-V2i"/>
                                         <constraint firstItem="Rb8-V8-3Bx" firstAttribute="leading" secondItem="ai7-C5-ufg" secondAttribute="trailing" constant="16" id="kbh-Nl-TgZ"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="esB-xr-fwo" secondAttribute="trailing" constant="16" id="ned-gJ-106"/>
+                                        <constraint firstItem="GtL-mZ-RRu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ke8-xo-vqg" secondAttribute="leading" constant="20" symbolic="YES" id="pM9-N2-Hf9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

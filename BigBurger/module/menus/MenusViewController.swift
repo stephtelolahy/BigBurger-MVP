@@ -11,6 +11,7 @@ import UIKit
 class MenusViewController: UITableViewController {
     
     // MARK: Fields
+    
     private var burgers: [Burger] = []
     
     private var presenter: (BasePresenter<MenusView> & MenusEventHandler)?
@@ -19,19 +20,16 @@ class MenusViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.presenter = MenusPresenter(view: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.presenter?.onWillAppear()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         self.presenter?.onWillDisappear()
     }
 
