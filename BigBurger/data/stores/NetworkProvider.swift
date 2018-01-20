@@ -11,39 +11,46 @@ import Alamofire
 
 class NetworkProvider {
     
-    private let configuration = URLSessionConfiguration.default
-    private let alamoFireManager: Alamofire.SessionManager
-    private var headers: [String: String] = ["Content-Type": "application/json"]
-    
-    init() {
-        self.configuration.timeoutIntervalForRequest = 30
-        self.configuration.timeoutIntervalForResource = 30
-        self.alamoFireManager = Alamofire.SessionManager(configuration: self.configuration)
-    }
+    private let alamoFireManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default)
+    private var headers = ["Content-Type": "application/json"]
     
     private func get(_ stringUrl: String) -> Observable<Data> {
         return Observable.create{ observer in
             self.alamoFireManager.request(stringUrl, method: .get, headers: self.headers)
                 .validate()
-                .responseData(completionHandler: { (response) in
-                    if let error = response.error {
+                .responseJSON { response in
+                    print("\n\n==\nRequest: [GET] \(stringUrl)\nHeaders: \(self.headers)\nResponse: \(response)")
+                    switch response.result {
+                    case .success(let json):
+                        do {
+//                            let data = try JSONSerialization.data(withJSONObject: json)
+//                            let validJsonArray = json as! [[String: Any]]
+//                            let data = try JSONSerialization.data(withJSONObject: validJsonArray, options: .prettyPrinted)
+                            
+                            let dictionary = [["ref": 1,"title": "The Big Burger","description": "Un classique mais tellement bon.","thumbnail": "https://bigburger.useradgents.com/images/1.png","price": 92820]]
+//                            let dictionary = json as! [[String: Any]]
+                            let jsonData = try? JSONSerialization.data(withJSONObject: dictionary, options: [])
+                            let jsonString = String(data: jsonData!, encoding: .utf8)
+                            let data = jsonString!.data(using: .utf8)!
+                            observer.onNext(data)
+                            observer.onCompleted()
+                        } catch let error {
+                            observer.onError(error)
+                        }
+                    case .failure(let error):
                         observer.onError(error)
-                    } else if let data = response.data {
-                        observer.onNext(data)
-                        observer.onCompleted()
-                    } else {
-                        observer.onError(NSError.init(domain: "Invalid response", code: 0, userInfo: nil))
                     }
-                })
+                    
+            }
             return Disposables.create()
         }
     }
-    
-    func getBurgers() -> Observable<[Burger]> {
-        return self.get("https://bigburger.useradgents.com/catalog/")
-            .map({ (data) -> [Burger] in
-                return try JSONDecoder().decode([Burger].self, from: data)
-            })
-    }
+
+func getBurgers() -> Observable<[Burger]> {
+    return self.get("https://bigburger.useradgents.com/catalog/")
+        .map({ (data) -> [Burger] in
+            return try JSONDecoder().decode([Burger].self, from: data)
+        })
+}
 }
 
