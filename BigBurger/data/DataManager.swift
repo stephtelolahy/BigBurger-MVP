@@ -15,6 +15,7 @@ class DataManager {
     func getBurgers() -> Observable<[Burger]> {
         let burgers = [Burger.sample, Burger.sample, Burger.sample]
         return Observable.just(burgers)
+            .delay(5, scheduler: MainScheduler.instance)
 //        return Observable.error(NSError(domain: "Failed getting burgers", code: 0, userInfo: nil))
     }
 }

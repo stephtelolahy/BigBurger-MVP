@@ -38,11 +38,14 @@ class MenusPresenter: MenusEventHandler {
     // MARK: MenusEventHandler
     
     func onWillAppear() {
+        self.view.showLoader()
         self.sub(DataManager.shared.getBurgers().subscribe(
             onNext: { (burgers) in
-            self.view.show(burgers: burgers)
+                self.view.show(burgers: burgers)
+                self.view.hideLoader()
         }, onError: { (error) in
             self.view.show(error: error)
+            self.view.hideLoader()
         }))
     }
     

@@ -6,13 +6,10 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
-protocol MenusView {
-    func show(error: Error)
+protocol MenusView: BaseView {
     func show(burgers: [Burger])
 }
 
-protocol MenusEventHandler {
-    func onWillAppear()
-    func onWillDisappear()
+protocol MenusEventHandler: BaseEventHandler {
     func onBurgerSelected(_ burger: Burger)
 }

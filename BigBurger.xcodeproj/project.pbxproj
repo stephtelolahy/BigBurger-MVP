@@ -15,6 +15,9 @@
 		AD189300201300E700E946F8 /* BurgerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892FF201300E700E946F8 /* BurgerCell.swift */; };
 		AD5010B5201305610019D7AA /* MenusContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5010B4201305610019D7AA /* MenusContracts.swift */; };
 		AD5010B7201305790019D7AA /* MenusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5010B6201305790019D7AA /* MenusPresenter.swift */; };
+		AD57258620130C8A0040A25B /* BaseEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258520130C8A0040A25B /* BaseEventHandler.swift */; };
+		AD57258820130CB90040A25B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258720130CB90040A25B /* BaseView.swift */; };
+		AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258A20130D800040A25B /* UIViewControllerExtension.swift */; };
 		ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C37201291AA00233215 /* AppDelegate.swift */; };
 		ADC16C3D201291AA00233215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3B201291AA00233215 /* Main.storyboard */; };
 		ADC16C3F201291AA00233215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3E201291AA00233215 /* Assets.xcassets */; };
@@ -30,6 +33,9 @@
 		AD1892FF201300E700E946F8 /* BurgerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCell.swift; sourceTree = "<group>"; };
 		AD5010B4201305610019D7AA /* MenusContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenusContracts.swift; sourceTree = "<group>"; };
 		AD5010B6201305790019D7AA /* MenusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenusPresenter.swift; sourceTree = "<group>"; };
+		AD57258520130C8A0040A25B /* BaseEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEventHandler.swift; sourceTree = "<group>"; };
+		AD57258720130CB90040A25B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		AD57258A20130D800040A25B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		ADC16C34201291AA00233215 /* BigBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC16C37201291AA00233215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC16C3C201291AA00233215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +114,23 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		AD57258420130C6F0040A25B /* base */ = {
+			isa = PBXGroup;
+			children = (
+				AD57258520130C8A0040A25B /* BaseEventHandler.swift */,
+				AD57258720130CB90040A25B /* BaseView.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		AD57258920130D6A0040A25B /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD57258A20130D800040A25B /* UIViewControllerExtension.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		ADC16C2B201291AA00233215 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +155,7 @@
 				AD1892F82012FDA200E946F8 /* application */,
 				ADC16C4A201291CE00233215 /* data */,
 				ADC16C49201291C800233215 /* module */,
+				AD57258920130D6A0040A25B /* utils */,
 				AD1892F72012FD7800E946F8 /* resources */,
 			);
 			path = BigBurger;
@@ -140,6 +164,7 @@
 		ADC16C49201291C800233215 /* module */ = {
 			isa = PBXGroup;
 			children = (
+				AD57258420130C6F0040A25B /* base */,
 				AD1892F42012FCE800E946F8 /* menus */,
 			);
 			path = module;
@@ -312,8 +337,11 @@
 				AD189300201300E700E946F8 /* BurgerCell.swift in Sources */,
 				AD5010B5201305610019D7AA /* MenusContracts.swift in Sources */,
 				ADC16C50201293C400233215 /* DataManager.swift in Sources */,
+				AD57258620130C8A0040A25B /* BaseEventHandler.swift in Sources */,
 				ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */,
+				AD57258820130CB90040A25B /* BaseView.swift in Sources */,
 				AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */,
+				AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */,
 				AD5010B7201305790019D7AA /* MenusPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
