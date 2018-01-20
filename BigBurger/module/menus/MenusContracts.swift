@@ -7,9 +7,9 @@
 //
 
 protocol MenusView: BaseView {
-    func show(burgers: [Burger])
+    func setBurgers(_ burgers: [Burger])
 }
 
-protocol MenusEventHandler {
+protocol MenusEventHandler: BaseEventHandler {
     func onBurgerSelected(_ burger: Burger)
 }

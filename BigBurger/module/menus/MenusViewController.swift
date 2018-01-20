@@ -13,8 +13,7 @@ class MenusViewController: UITableViewController {
     // MARK: Fields
     
     private var burgers: [Burger] = []
-    
-    private var presenter: (BasePresenter<MenusView> & MenusEventHandler)?
+    private var presenter: MenusEventHandler?
 
     // MARK: - Lifecycle
     
@@ -54,7 +53,7 @@ class MenusViewController: UITableViewController {
 
 extension MenusViewController: MenusView {
     
-    func show(burgers: [Burger]) {
+    func setBurgers(_ burgers: [Burger]) {
         self.burgers = burgers
         self.tableView.reloadData()
     }

@@ -17,6 +17,7 @@
 		AD57258620130C8A0040A25B /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258520130C8A0040A25B /* BasePresenter.swift */; };
 		AD57258820130CB90040A25B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258720130CB90040A25B /* BaseView.swift */; };
 		AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258A20130D800040A25B /* UIViewControllerExtension.swift */; };
+		ADAB2D7C20132A1600D0A760 /* BaseEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB2D7B20132A1600D0A760 /* BaseEventHandler.swift */; };
 		ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C37201291AA00233215 /* AppDelegate.swift */; };
 		ADC16C3D201291AA00233215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3B201291AA00233215 /* Main.storyboard */; };
 		ADC16C3F201291AA00233215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3E201291AA00233215 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		AD57258520130C8A0040A25B /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		AD57258720130CB90040A25B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AD57258A20130D800040A25B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		ADAB2D7B20132A1600D0A760 /* BaseEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEventHandler.swift; sourceTree = "<group>"; };
 		ADC16C34201291AA00233215 /* BigBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC16C37201291AA00233215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC16C3C201291AA00233215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				AD57258720130CB90040A25B /* BaseView.swift */,
+				ADAB2D7B20132A1600D0A760 /* BaseEventHandler.swift */,
 				AD57258520130C8A0040A25B /* BasePresenter.swift */,
 			);
 			path = base;
@@ -338,6 +341,7 @@
 				AD57258620130C8A0040A25B /* BasePresenter.swift in Sources */,
 				ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */,
 				AD57258820130CB90040A25B /* BaseView.swift in Sources */,
+				ADAB2D7C20132A1600D0A760 /* BaseEventHandler.swift in Sources */,
 				AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */,
 				AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */,
 				AD5010B7201305790019D7AA /* MenusPresenter.swift in Sources */,

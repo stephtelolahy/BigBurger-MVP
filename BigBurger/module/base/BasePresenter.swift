@@ -8,7 +8,7 @@
 
 import RxSwift
 
-class BasePresenter<T> {
+class BasePresenter<T>: BaseEventHandler {
     
     // MARK: Fields
     
