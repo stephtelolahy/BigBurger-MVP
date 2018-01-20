@@ -14,4 +14,10 @@ class NetworkProvider {
     let configuration = URLSessionConfiguration.default
     var alamoFireManager = Alamofire.SessionManager.default
     var headers: [String: String] = ["Content-Type": "application/json"]
+    
+    init() {
+        self.configuration.timeoutIntervalForRequest = 30
+        self.configuration.timeoutIntervalForResource = 30
+        self.alamoFireManager = Alamofire.SessionManager(configuration: self.configuration)
+    }
 }
