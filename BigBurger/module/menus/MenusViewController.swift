@@ -32,6 +32,7 @@ class MenusViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BurgerCell", for: indexPath) as! BurgerCell
+        cell.update(with: burgers[indexPath.row])
         return cell
     }
 }
