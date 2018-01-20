@@ -11,5 +11,7 @@ class DataManager {
     
     static let shared = DataManager()
 
-    
+    func getBurgers() -> [Burger] {
+        return [Burger.sample, Burger.sample, Burger.sample]
+    }
 }
