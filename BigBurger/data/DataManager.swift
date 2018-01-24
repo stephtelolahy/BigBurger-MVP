@@ -15,6 +15,6 @@ class DataManager {
     private let networkProvider = NetworkProvider()
 
     func getBurgers() -> Observable<[Burger]> {
-        return self.networkProvider.getBurgers()
+        return self.networkProvider.getBurgers().retry(2)
     }
 }

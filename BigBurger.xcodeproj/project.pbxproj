@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81E321D9CFED968253A145A0 /* Pods_BigBurger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E1FF027245C10EF897FFC3 /* Pods_BigBurger.framework */; };
+		AD0E494120190ACB000A256E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0E494020190ACB000A256E /* BaseTableViewController.swift */; };
 		AD1892F62012FD1200E946F8 /* MenusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892F52012FD1200E946F8 /* MenusViewController.swift */; };
 		AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1892FA2012FE6500E946F8 /* NetworkProvider.swift */; };
 		AD1892FD2012FED100E946F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1892FC2012FED100E946F8 /* LaunchScreen.storyboard */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		3C3EBCDFCC1FC772380CEBE9 /* Pods-BigBurger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0E494020190ACB000A256E /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		AD1892F52012FD1200E946F8 /* MenusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenusViewController.swift; sourceTree = "<group>"; };
 		AD1892FA2012FE6500E946F8 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		AD1892FC2012FED100E946F8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				AD57258720130CB90040A25B /* BaseView.swift */,
 				ADAB2D7B20132A1600D0A760 /* BaseEventHandler.swift */,
 				AD57258520130C8A0040A25B /* BasePresenter.swift */,
+				AD0E494020190ACB000A256E /* BaseTableViewController.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				AD1892F62012FD1200E946F8 /* MenusViewController.swift in Sources */,
 				ADC16C4C201291E100233215 /* Burger.swift in Sources */,
+				AD0E494120190ACB000A256E /* BaseTableViewController.swift in Sources */,
 				AD189300201300E700E946F8 /* BurgerCell.swift in Sources */,
 				AD5010B5201305610019D7AA /* MenusContracts.swift in Sources */,
 				ADC16C50201293C400233215 /* DataManager.swift in Sources */,
