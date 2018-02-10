@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
-protocol MenusView: BaseView {
+protocol MenusView: MvpView {
     func setBurgers(_ burgers: [Burger])
 }
 

@@ -1,5 +1,5 @@
 //
-//  UIViewController+BaseView.swift
+//  UIViewController+MvpView.swift
 //  BigBurger
 //
 //  Created by Hugues Stéphano TELOLAHY on 2/10/18.
@@ -9,7 +9,7 @@
 import UIKit
 import MBProgressHUD
 
-extension UIViewController: BaseView {
+extension UIViewController: MvpView {
     
     func showLoader() {
         if let hud = MBProgressHUD(for: self.view) {
