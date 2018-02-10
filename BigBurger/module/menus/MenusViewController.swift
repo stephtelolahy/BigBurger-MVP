@@ -19,7 +19,7 @@ class MenusViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = MenusPresenter(view: self)
+        self.presenter = MenusPresenter(view: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
