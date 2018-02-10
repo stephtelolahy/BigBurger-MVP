@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
-protocol MvpView {
+protocol MvpView: class {
     func showLoader()
     func hideLoader()
     func showError(_ error: Error)

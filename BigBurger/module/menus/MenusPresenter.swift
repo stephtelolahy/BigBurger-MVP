@@ -8,20 +8,40 @@
 
 import RxSwift
 
-class MenusPresenter: BasePresenter<MenusView>, MenusEventHandler {
+class MenusPresenter: MenusEventHandler {
     
-    // MARK: MenusEventHandler
+    private weak var view: MenusView?
+    private var subscriptions: [Disposable] = []
     
-    override func onWillAppear() {
-        self.view.showLoader()
+    init(view: MenusView) {
+        self.view = view
+    }
+    
+    func onWillAppear() {
+        self.view?.showLoader()
         self.sub(DataManager.shared.getBurgers().subscribe(
             onNext: { (burgers) in
-                self.view.setBurgers(burgers)
-                self.view.hideLoader()
+                self.view?.setBurgers(burgers)
+                self.view?.hideLoader()
         }, onError: { (error) in
-            self.view.showError(error)
-            self.view.hideLoader()
+            self.view?.showError(error)
+            self.view?.hideLoader()
         }))
+    }
+    
+    func onWillDisappear() {
+        unSub()
+        self.view?.hideLoader()
+    }
+    
+    private func sub(_ disposable: Disposable) {
+        self.subscriptions.append(disposable)
+    }
+    
+    private func unSub() {
+        while !subscriptions.isEmpty {
+            subscriptions.popLast()?.dispose()
+        }
     }
     
     func onBurgerSelected(_ burger: Burger) {

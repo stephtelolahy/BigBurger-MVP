@@ -8,16 +8,28 @@
 
 import UIKit
 
-class MenusViewController: BaseTableViewController<MenusEventHandler> {
+class MenusViewController: UITableViewController {
     
     // MARK: Fields
     
+    private var presenter: MenusEventHandler?
     private var burgers: [Burger] = []
 
     // MARK: - Lifecycle
     
-    override func initPresenter() throws -> MenusEventHandler? {
-        return MenusPresenter(view: self)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter = MenusPresenter(view: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.presenter?.onWillAppear()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.presenter?.onWillDisappear()
     }
     
     // MARK: - UITableViewDataSource
