@@ -17,7 +17,6 @@
 		AD5010B7201305790019D7AA /* MenusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5010B6201305790019D7AA /* MenusPresenter.swift */; };
 		AD57258620130C8A0040A25B /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258520130C8A0040A25B /* BasePresenter.swift */; };
 		AD57258820130CB90040A25B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258720130CB90040A25B /* BaseView.swift */; };
-		AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258A20130D800040A25B /* UIViewControllerExtension.swift */; };
 		AD7ADA16202F58E5005B9D03 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA15202F58E5005B9D03 /* APIError.swift */; };
 		AD7ADA18202F632A005B9D03 /* SimpleNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA17202F632A005B9D03 /* SimpleNetworkProvider.swift */; };
 		AD7ADA1A202F638B005B9D03 /* InitialNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA19202F638B005B9D03 /* InitialNetworkProvider.swift */; };
@@ -40,7 +39,6 @@
 		AD5010B6201305790019D7AA /* MenusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenusPresenter.swift; sourceTree = "<group>"; };
 		AD57258520130C8A0040A25B /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		AD57258720130CB90040A25B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		AD57258A20130D800040A25B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		AD7ADA15202F58E5005B9D03 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		AD7ADA17202F632A005B9D03 /* SimpleNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkProvider.swift; sourceTree = "<group>"; };
 		AD7ADA19202F638B005B9D03 /* InitialNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialNetworkProvider.swift; sourceTree = "<group>"; };
@@ -134,14 +132,6 @@
 			path = base;
 			sourceTree = "<group>";
 		};
-		AD57258920130D6A0040A25B /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				AD57258A20130D800040A25B /* UIViewControllerExtension.swift */,
-			);
-			path = utils;
-			sourceTree = "<group>";
-		};
 		ADC16C2B201291AA00233215 = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +156,6 @@
 				AD1892F82012FDA200E946F8 /* application */,
 				ADC16C4A201291CE00233215 /* data */,
 				ADC16C49201291C800233215 /* module */,
-				AD57258920130D6A0040A25B /* utils */,
 				AD1892F72012FD7800E946F8 /* resources */,
 			);
 			path = BigBurger;
@@ -360,7 +349,6 @@
 				ADAB2D7C20132A1600D0A760 /* BaseEventHandler.swift in Sources */,
 				AD7ADA18202F632A005B9D03 /* SimpleNetworkProvider.swift in Sources */,
 				AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */,
-				AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */,
 				AD5010B7201305790019D7AA /* MenusPresenter.swift in Sources */,
 				AD7ADA16202F58E5005B9D03 /* APIError.swift in Sources */,
 			);
