@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
-struct Burger {
+struct Burger: Codable {
     let ref: String
     let title: String
     let description: String
