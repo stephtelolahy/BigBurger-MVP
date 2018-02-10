@@ -9,6 +9,5 @@
 import RxSwift
 
 protocol NetworkProvider {
-    
     func getBurgers() -> Observable<[Burger]>
 }
