@@ -12,41 +12,53 @@ import Alamofire
 class NetworkProvider {
     
     private let alamoFireManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default)
-    private var headers = ["Content-Type": "application/json"]
+    private let headers = ["Content-Type": "application/json"]
     
-    private func get(_ stringUrl: String) -> Observable<Data> {
+    private func get(_ stringUrl: String) -> Observable<Any> {
         return Observable.create{ observer in
             self.alamoFireManager.request(stringUrl, method: .get, headers: self.headers)
                 .validate()
                 .responseJSON { response in
                     print("\n\n==\nRequest: [GET] \(stringUrl)\nHeaders: \(self.headers)\nResponse: \(response)")
                     switch response.result {
-                    case .success(let jsonValue):
-                        do {
-//                            let dictionary = [["ref": 1,"title": "The Big Burger","description": "Un classique mais tellement bon.","thumbnail": "https://bigburger.useradgents.com/images/1.png","price": 92820]]
-                            let data = try JSONSerialization.data(withJSONObject: jsonValue)
-                            
-                            observer.onNext(data)
-                            observer.onCompleted()
-                        } catch let error {
-                            observer.onError(error)
-                        }
+                    case .success(let json):
+                        observer.onNext(json)
+                        observer.onCompleted()
                     case .failure(let error):
                         observer.onError(error)
                     }
-
             }
             return Disposables.create()
         }
     }
-
-func getBurgers() -> Observable<[Burger]> {
-    return self.get("https://bigburger.useradgents.com/catalog/")
-        .map({ (data) -> [Burger] in
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
-            return try decoder.decode([Burger].self, from: data)
-        })
+    
+    func getBurgers() -> Observable<[Burger]> {
+        return self.get("https://bigburger.useradgents.com/catalog/")
+            .map({ (json) -> [Burger] in
+                guard let array = json as? [[String: Any]] else {
+                    throw APIError.mappingError("Failed mapping burgers from response")
+                }
+                return array.flatMap{ Burger($0) }
+            })
+    }
 }
-}
 
+private extension Burger {
+    
+    init?(_ json: [String: Any]) {
+        guard let ref = json["ref"] as? String,
+            let title = json["title"] as? String,
+            let description = json["description"] as? String,
+            let thumbnail = json["thumbnail"] as? String,
+            let price = json["price"] as? Int
+            else {
+                return nil
+        }
+        
+        self.ref = ref
+        self.title = title
+        self.description = description
+        self.thumbnail = thumbnail
+        self.price = price
+    }
+}

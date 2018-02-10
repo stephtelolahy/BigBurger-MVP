@@ -18,6 +18,7 @@
 		AD57258620130C8A0040A25B /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258520130C8A0040A25B /* BasePresenter.swift */; };
 		AD57258820130CB90040A25B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258720130CB90040A25B /* BaseView.swift */; };
 		AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD57258A20130D800040A25B /* UIViewControllerExtension.swift */; };
+		AD7ADA16202F58E5005B9D03 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA15202F58E5005B9D03 /* APIError.swift */; };
 		ADAB2D7C20132A1600D0A760 /* BaseEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB2D7B20132A1600D0A760 /* BaseEventHandler.swift */; };
 		ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C37201291AA00233215 /* AppDelegate.swift */; };
 		ADC16C3D201291AA00233215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3B201291AA00233215 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		AD57258520130C8A0040A25B /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		AD57258720130CB90040A25B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AD57258A20130D800040A25B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		AD7ADA15202F58E5005B9D03 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		ADAB2D7B20132A1600D0A760 /* BaseEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEventHandler.swift; sourceTree = "<group>"; };
 		ADC16C34201291AA00233215 /* BigBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC16C37201291AA00233215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC16C4B201291E100233215 /* Burger.swift */,
+				AD7ADA15202F58E5005B9D03 /* APIError.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */,
 				AD57258B20130D800040A25B /* UIViewControllerExtension.swift in Sources */,
 				AD5010B7201305790019D7AA /* MenusPresenter.swift in Sources */,
+				AD7ADA16202F58E5005B9D03 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
