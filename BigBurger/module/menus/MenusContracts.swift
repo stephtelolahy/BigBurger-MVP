@@ -10,6 +10,6 @@ protocol MenusView: MvpView {
     func setBurgers(_ burgers: [Burger])
 }
 
-protocol MenusEventHandler: MvpPresenter {
+protocol MenusEventHandler: EventHandler {
     func onBurgerSelected(_ burger: Burger)
 }

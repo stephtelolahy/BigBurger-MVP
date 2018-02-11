@@ -2,25 +2,25 @@
 //  MvpPresenter.swift
 //  BigBurger
 //
-//  Created by Hugues Stéphano TELOLAHY on 1/20/18.
+//  Created by Hugues Stéphano TELOLAHY on 2/11/18.
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
 import RxSwift
 
-protocol MvpPresenter {
-    func onWillAppear()
-    func onWillDisappear()
-}
-
-class BaseMvpPresenter<T: AnyObject & MvpView>: MvpPresenter {
+class MvpPresenter<T: AnyObject & MvpView>: EventHandler {
     
+    // MARK: Fields
     weak var view: T?
     private var subscriptions: [Disposable] = []
+    
+    // MAR: Init
     
     init(view: T) {
         self.view = view
     }
+    
+    // MARK: EventHandler
     
     func onWillAppear() {}
     
@@ -28,6 +28,8 @@ class BaseMvpPresenter<T: AnyObject & MvpView>: MvpPresenter {
         self.unSub()
         self.view?.hideLoader()
     }
+    
+    // MARK: ObservableHandler
     
     func sub(_ disposable: Disposable) {
         self.subscriptions.append(disposable)

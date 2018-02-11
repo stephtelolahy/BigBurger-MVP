@@ -6,7 +6,9 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
-class MenusPresenter: BaseMvpPresenter<MenusViewController>, MenusEventHandler {
+class MenusPresenter: MvpPresenter<MenusViewController>, MenusEventHandler {
+    
+    // MARK: EventHandler
     
     override func onWillAppear() {
         self.view?.showLoader()
@@ -19,6 +21,8 @@ class MenusPresenter: BaseMvpPresenter<MenusViewController>, MenusEventHandler {
             self.view?.hideLoader()
         }))
     }
+    
+    // MARK: MenusEventHandler
     
     func onBurgerSelected(_ burger: Burger) {
         print("Selected burger: \(burger.title)")
