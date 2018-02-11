@@ -18,13 +18,14 @@
 		AD7ADA16202F58E5005B9D03 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA15202F58E5005B9D03 /* APIError.swift */; };
 		AD7ADA18202F632A005B9D03 /* SimpleNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA17202F632A005B9D03 /* SimpleNetworkProvider.swift */; };
 		AD7ADA1A202F638B005B9D03 /* InitialNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA19202F638B005B9D03 /* InitialNetworkProvider.swift */; };
-		AD7ADA1C202F6B6C005B9D03 /* UIViewController+MvpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA1B202F6B6C005B9D03 /* UIViewController+MvpView.swift */; };
 		AD7ADA1E202F703C005B9D03 /* MvpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7ADA1D202F703C005B9D03 /* MvpPresenter.swift */; };
 		ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C37201291AA00233215 /* AppDelegate.swift */; };
 		ADC16C3D201291AA00233215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3B201291AA00233215 /* Main.storyboard */; };
 		ADC16C3F201291AA00233215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC16C3E201291AA00233215 /* Assets.xcassets */; };
 		ADC16C4C201291E100233215 /* Burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C4B201291E100233215 /* Burger.swift */; };
 		ADC16C50201293C400233215 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C4F201293C400233215 /* DataManager.swift */; };
+		ADF50E4C20303DEA0068E28B /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF50E4B20303DEA0068E28B /* Loadable.swift */; };
+		ADF50E4E20303E200068E28B /* Failable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF50E4D20303E200068E28B /* Failable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,6 @@
 		AD7ADA15202F58E5005B9D03 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		AD7ADA17202F632A005B9D03 /* SimpleNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkProvider.swift; sourceTree = "<group>"; };
 		AD7ADA19202F638B005B9D03 /* InitialNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialNetworkProvider.swift; sourceTree = "<group>"; };
-		AD7ADA1B202F6B6C005B9D03 /* UIViewController+MvpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MvpView.swift"; sourceTree = "<group>"; };
 		AD7ADA1D202F703C005B9D03 /* MvpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvpPresenter.swift; sourceTree = "<group>"; };
 		ADC16C34201291AA00233215 /* BigBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC16C37201291AA00233215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		ADC16C43201291AA00233215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC16C4B201291E100233215 /* Burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burger.swift; sourceTree = "<group>"; };
 		ADC16C4F201293C400233215 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		ADF50E4B20303DEA0068E28B /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		ADF50E4D20303E200068E28B /* Failable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failable.swift; sourceTree = "<group>"; };
 		D2E1FF027245C10EF897FFC3 /* Pods_BigBurger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BigBurger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7ECBA131DA8EF2110F08BD3 /* Pods-BigBurger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,9 +124,10 @@
 		AD57258420130C6F0040A25B /* base */ = {
 			isa = PBXGroup;
 			children = (
+				ADF50E4B20303DEA0068E28B /* Loadable.swift */,
+				ADF50E4D20303E200068E28B /* Failable.swift */,
 				AD57258720130CB90040A25B /* MvpView.swift */,
 				AD7ADA1D202F703C005B9D03 /* MvpPresenter.swift */,
-				AD7ADA1B202F6B6C005B9D03 /* UIViewController+MvpView.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -339,14 +342,15 @@
 				AD5010B5201305610019D7AA /* MenusContracts.swift in Sources */,
 				ADC16C50201293C400233215 /* DataManager.swift in Sources */,
 				AD7ADA1A202F638B005B9D03 /* InitialNetworkProvider.swift in Sources */,
-				AD7ADA1C202F6B6C005B9D03 /* UIViewController+MvpView.swift in Sources */,
 				ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */,
 				AD57258820130CB90040A25B /* MvpView.swift in Sources */,
+				ADF50E4E20303E200068E28B /* Failable.swift in Sources */,
 				AD7ADA18202F632A005B9D03 /* SimpleNetworkProvider.swift in Sources */,
 				AD1892FB2012FE6500E946F8 /* NetworkProvider.swift in Sources */,
 				AD5010B7201305790019D7AA /* MenusPresenter.swift in Sources */,
 				AD7ADA16202F58E5005B9D03 /* APIError.swift in Sources */,
 				AD7ADA1E202F703C005B9D03 /* MvpPresenter.swift in Sources */,
+				ADF50E4C20303DEA0068E28B /* Loadable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

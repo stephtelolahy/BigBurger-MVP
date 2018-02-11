@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenusViewController: UITableViewController {
+class MenusViewController: UITableViewController, MenusView {
     
     // MARK: Fields
     
@@ -32,6 +32,13 @@ class MenusViewController: UITableViewController {
         self.presenter?.onWillDisappear()
     }
     
+    // MARK: MenusView
+    
+    func setBurgers(_ burgers: [Burger]) {
+        self.burgers = burgers
+        self.tableView.reloadData()
+    }
+    
     // MARK: - UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,13 +56,5 @@ class MenusViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.presenter?.onBurgerSelected(self.burgers[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-extension MenusViewController: MenusView {
-    
-    func setBurgers(_ burgers: [Burger]) {
-        self.burgers = burgers
-        self.tableView.reloadData()
     }
 }

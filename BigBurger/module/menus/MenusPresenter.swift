@@ -6,18 +6,9 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
-import RxSwift
-
-class MenusPresenter: MenusEventHandler {
+class MenusPresenter: BaseMvpPresenter<MenusViewController>, MenusEventHandler {
     
-    private weak var view: MenusView?
-    private var subscriptions: [Disposable] = []
-    
-    init(view: MenusView) {
-        self.view = view
-    }
-    
-    func onWillAppear() {
+    override func onWillAppear() {
         self.view?.showLoader()
         self.sub(DataManager.shared.getBurgers().subscribe(
             onNext: { (burgers) in
@@ -29,23 +20,8 @@ class MenusPresenter: MenusEventHandler {
         }))
     }
     
-    func onWillDisappear() {
-        unSub()
-        self.view?.hideLoader()
-    }
-    
-    private func sub(_ disposable: Disposable) {
-        self.subscriptions.append(disposable)
-    }
-    
-    private func unSub() {
-        while !subscriptions.isEmpty {
-            subscriptions.popLast()?.dispose()
-        }
-    }
-    
     func onBurgerSelected(_ burger: Burger) {
-        
+        print("Selected burger: \(burger.title)")
     }
 }
 
