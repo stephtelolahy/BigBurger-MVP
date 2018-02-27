@@ -26,7 +26,6 @@
 		ADC16C50201293C400233215 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC16C4F201293C400233215 /* DataManager.swift */; };
 		ADF50E4C20303DEA0068E28B /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF50E4B20303DEA0068E28B /* Loadable.swift */; };
 		ADF50E4E20303E200068E28B /* Failable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF50E4D20303E200068E28B /* Failable.swift */; };
-		ADF50E542030480F0068E28B /* MvpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF50E532030480F0068E28B /* MvpPresenter.swift */; };
 		ADF50E562030484A0068E28B /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF50E552030484A0068E28B /* EventHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +51,6 @@
 		ADC16C4F201293C400233215 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ADF50E4B20303DEA0068E28B /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		ADF50E4D20303E200068E28B /* Failable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failable.swift; sourceTree = "<group>"; };
-		ADF50E532030480F0068E28B /* MvpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvpPresenter.swift; sourceTree = "<group>"; };
 		ADF50E552030484A0068E28B /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 		D2E1FF027245C10EF897FFC3 /* Pods_BigBurger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BigBurger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7ECBA131DA8EF2110F08BD3 /* Pods-BigBurger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				ADF50E4D20303E200068E28B /* Failable.swift */,
 				AD57258720130CB90040A25B /* MvpView.swift */,
 				ADF50E552030484A0068E28B /* EventHandler.swift */,
-				ADF50E532030480F0068E28B /* MvpPresenter.swift */,
 				ADC082BC204578E600FDC074 /* UIViewController+Loadable.swift */,
 				ADC082BE2045791A00FDC074 /* UIViewController+Failable.swift */,
 			);
@@ -342,7 +339,6 @@
 				ADC16C50201293C400233215 /* DataManager.swift in Sources */,
 				ADC16C38201291AA00233215 /* AppDelegate.swift in Sources */,
 				ADC082BD204578E600FDC074 /* UIViewController+Loadable.swift in Sources */,
-				ADF50E542030480F0068E28B /* MvpPresenter.swift in Sources */,
 				AD57258820130CB90040A25B /* MvpView.swift in Sources */,
 				ADF50E4E20303E200068E28B /* Failable.swift in Sources */,
 				AD7ADA18202F632A005B9D03 /* NetworkProvider.swift in Sources */,

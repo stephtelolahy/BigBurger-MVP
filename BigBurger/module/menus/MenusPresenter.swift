@@ -6,12 +6,35 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
-// FIXME: depenency to ViewController
-class MenusPresenter: MvpPresenter<MenusViewController>, MenusEventHandler {
+import RxSwift
+
+class MenusPresenter: MenusEventHandler {
+    
+    // MARK: Fields
+    private unowned var view: AnyObject & MenusView
+    private var subscriptions: [Disposable] = []
+    
+    // MAR: Init
+    
+    init(view: AnyObject & MenusView) {
+        self.view = view
+    }
+    
+    // MARK: Observable handling
+    
+    func sub(_ disposable: Disposable) {
+        self.subscriptions.append(disposable)
+    }
+    
+    func unSub() {
+        while !subscriptions.isEmpty {
+            subscriptions.popLast()?.dispose()
+        }
+    }
     
     // MARK: EventHandler
     
-    override func onWillAppear() {
+    func onWillAppear() {
         self.view.showLoader()
         self.sub(DataManager.shared.getBurgers().subscribe(
             onNext: { (burgers) in
@@ -21,6 +44,11 @@ class MenusPresenter: MvpPresenter<MenusViewController>, MenusEventHandler {
             self.view.showError(error)
             self.view.hideLoader()
         }))
+    }
+    
+    func onWillDisappear() {
+        self.unSub()
+        self.view.hideLoader()
     }
     
     // MARK: MenusEventHandler
