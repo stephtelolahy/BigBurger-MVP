@@ -11,7 +11,7 @@ import RxSwift
 class DataManager {
     
     static let shared = DataManager()
-    private let networkProvider: NetworkProvider = SimpleNetworkProvider()
+    private let networkProvider: NetworkInterface = NetworkProvider()
     
     func getBurgers() -> Observable<[Burger]> {
         return self.networkProvider.getBurgers()
