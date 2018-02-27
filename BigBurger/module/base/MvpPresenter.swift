@@ -8,10 +8,10 @@
 
 import RxSwift
 
-class MvpPresenter<T: AnyObject & MvpView>: EventHandler {
+class MvpPresenter<T: MvpView>: EventHandler {
     
     // MARK: Fields
-    weak var view: T?
+    unowned var view: T
     private var subscriptions: [Disposable] = []
     
     // MAR: Init
@@ -26,7 +26,7 @@ class MvpPresenter<T: AnyObject & MvpView>: EventHandler {
     
     func onWillDisappear() {
         self.unSub()
-        self.view?.hideLoader()
+        self.view.hideLoader()
     }
     
     // MARK: ObservableHandler

@@ -6,19 +6,20 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
+// FIXME: depenency to ViewController
 class MenusPresenter: MvpPresenter<MenusViewController>, MenusEventHandler {
     
     // MARK: EventHandler
     
     override func onWillAppear() {
-        self.view?.showLoader()
+        self.view.showLoader()
         self.sub(DataManager.shared.getBurgers().subscribe(
             onNext: { (burgers) in
-                self.view?.setBurgers(burgers)
-                self.view?.hideLoader()
+                self.view.setBurgers(burgers)
+                self.view.hideLoader()
         }, onError: { (error) in
-            self.view?.showError(error)
-            self.view?.hideLoader()
+            self.view.showError(error)
+            self.view.hideLoader()
         }))
     }
     
