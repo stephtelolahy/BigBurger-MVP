@@ -6,5 +6,5 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
-protocol MvpView: Loadable, Failable {
+protocol MvpView: AnyObject, Loadable, Failable {
 }

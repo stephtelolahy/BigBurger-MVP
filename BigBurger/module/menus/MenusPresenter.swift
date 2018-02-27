@@ -11,12 +11,12 @@ import RxSwift
 class MenusPresenter: MenusEventHandler {
     
     // MARK: Fields
-    private unowned var view: AnyObject & MenusView
+    unowned var view: MenusView
     private var subscriptions: [Disposable] = []
     
     // MAR: Init
     
-    init(view: AnyObject & MenusView) {
+    required init(view: MenusView) {
         self.view = view
     }
     

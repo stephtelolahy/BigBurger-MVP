@@ -11,5 +11,6 @@ protocol MenusView: MvpView {
 }
 
 protocol MenusEventHandler: EventHandler {
+    init(view: MenusView)
     func onBurgerSelected(_ burger: Burger)
 }
